@@ -1,21 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>TallerWeb | Comprar</title>
-
+    <title>El Emporio Brillante | Comprar</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
     <header>
-
-        <h1>TallerWeb</h1>
-
+        <h1>El Emporio Brillante</h1>
         <nav>
             <a href="index.html">Inicio</a>
             <a href="listado_tabla.html">Productos</a>
@@ -23,191 +16,57 @@
             <a href="producto.html">Producto</a>
             <a href="comprar.html">Comprar</a>
         </nav>
-
     </header>
 
-
-    <main class="compra">
-
+    <main>
         <h2>Formulario de compra</h2>
-
-        <p>
-            Completá tus datos para solicitar el servicio.
-        </p>
-
+        <p>Completá tus datos para solicitar el servicio.</p>
 
         <form>
-
-
-            <!-- DATOS DEL CLIENTE -->
-
             <fieldset>
-
                 <legend>Datos del cliente</legend>
 
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingresá tu nombre">
 
-                <label for="nombre">
-                    Nombre completo
-                </label>
+                <label for="direccion">Dirección</label>
+                <input type="text" id="direccion" name="direccion" placeholder="Ingresá tu dirección">
 
-                <input
-                    type="text"
-                    id="nombre"
-                    name="nombre"
-                    placeholder="Ingresá tu nombre"
-                >
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="Ingresá tu teléfono">
 
-
-                <label for="direccion">
-                    Dirección
-                </label>
-
-                <input
-                    type="text"
-                    id="direccion"
-                    name="direccion"
-                    placeholder="Ingresá tu dirección"
-                >
-
-
-                <label for="telefono">
-                    Teléfono
-                </label>
-
-                <input
-                    type="tel"
-                    id="telefono"
-                    name="telefono"
-                    placeholder="Ingresá tu teléfono"
-                >
-
-
-                <label for="email">
-                    E-mail
-                </label>
-
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="ejemplo@email.com"
-                >
-
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="ejemplo@email.com">
             </fieldset>
 
-
-            <!-- MEDIO DE PAGO -->
-
             <fieldset>
-
                 <legend>Medio de pago</legend>
 
-                <label for="pago">
-                    Seleccioná un medio de pago
-                </label>
-
+                <label for="pago">Seleccioná un medio de pago</label>
                 <select id="pago" name="pago">
-
-                    <option value="">
-                        Seleccionar
-                    </option>
-
-                    <option value="efectivo">
-                        Efectivo
-                    </option>
-
-                    <option value="transferencia">
-                        Transferencia bancaria
-                    </option>
-
-                    <option value="tarjeta">
-                        Tarjeta
-                    </option>
-
+                    <option value="">Seleccionar</option>
+                    <option value="efectivo">Efectivo</option>
+                    <option value="transferencia">Transferencia bancaria</option>
+                    <option value="tarjeta">Tarjeta</option>
                 </select>
-
             </fieldset>
-
-
-            <!-- PRODUCTOS -->
 
             <fieldset>
-
                 <legend>Productos / Servicios</legend>
+                <p>Seleccioná el servicio que querés solicitar:</p>
 
-                <p>
-                    Seleccioná el servicio que querés solicitar:
-                </p>
-
-
-                <label class="producto-check">
-
-                    <input
-                        type="checkbox"
-                        name="producto"
-                        value="pantalla"
-                    >
-
-                    Reparación de pantalla - $45.000
-
-                </label>
-
-
-                <label class="producto-check">
-
-                    <input
-                        type="checkbox"
-                        name="producto"
-                        value="bateria"
-                    >
-
-                    Cambio de batería - $30.000
-
-                </label>
-
-
-                <label class="producto-check">
-
-                    <input
-                        type="checkbox"
-                        name="producto"
-                        value="notebook"
-                    >
-
-                    Limpieza de notebook - $20.000
-
-                </label>
-
-
-                <label class="producto-check">
-
-                    <input
-                        type="checkbox"
-                        name="producto"
-                        value="pc"
-                    >
-
-                    Formateo de PC - $25.000
-
-                </label>
-
+                <label><input type="checkbox" name="producto" value="pantalla"> Reparación de pantalla - $45.000</label>
+                <label><input type="checkbox" name="producto" value="bateria"> Cambio de batería - $30.000</label>
+                <label><input type="checkbox" name="producto" value="notebook"> Limpieza de notebook - $20.000</label>
+                <label><input type="checkbox" name="producto" value="pc"> Formateo de PC - $25.000</label>
             </fieldset>
 
-
-            <button type="submit">
-                Confirmar compra
-            </button>
-
-
+            <button type="submit">Confirmar compra</button>
         </form>
-
     </main>
 
-
     <footer>
-        <p>TallerWeb - Servicio técnico</p>
+        <p>Venta de impresoras</p>
     </footer>
-
 </body>
-
 </html>
