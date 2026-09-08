@@ -26,7 +26,7 @@ header {
     background-color: #041207;
     color: #2bf979;
     border-bottom: 2px solid #2bf979;
-    text-shadow: 0 0 6px #2bf979;
+    text-shadow: 0 0 6px #2bf979; /*para el brillo alrededor de la letra*/
     padding: 20px;
     display: flex;
     justify-content: space-between;
