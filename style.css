@@ -143,7 +143,7 @@ table{
     gap: 60px;
     background-color: #1f63be;
     border-radius: 10px;
-    box-shadow: 0, 0, 2;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     flex-direction: row;
 
 }
@@ -175,4 +175,59 @@ table{
     text-decoration: none;
     border-radius: 10px;
 
+}
+
+.compra {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.compra h2 {
+    color: #2bf979;
+    text-shadow: 0 0 6px #2bf979;
+}
+
+.compra form {
+    max-width: 600px;
+    margin: 30px auto 0 auto;
+    text-align: left;
+}
+
+.compra fieldset {
+    border: 2px solid #2bf979;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.compra legend {
+    color: #2bf979;
+    text-shadow: 0 0 6px #2bf979;
+}
+
+.compra label {
+    display: block;
+    margin-top: 15px;
+}
+
+.compra input,
+.compra select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    background-color: #041207;
+    border: 1px solid #2bf979;
+    color: white;
+    font-family: Monofonto, sans-serif;
+}
+
+.compra input[type="checkbox"] {
+    width: auto;
+}
+
+.compra button {
+    background-color: #F2E870;
+    color: #000101;
+    border: none;
+    padding: 12px 20px;
+    font-family: Monofonto, sans-serif;
 }
