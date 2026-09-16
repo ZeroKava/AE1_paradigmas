@@ -48,7 +48,7 @@ nav a:hover {
 }
 
 .portada {
-    background-image: url("vault_boy.jpg");
+    background-image: url("imagenes/vault_boy.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;    color: white;
