@@ -14,6 +14,47 @@
     box-sizing: border-box;
 }
 
+/*para las pantallas más grandes que 1200px*/
+@media (min-width: 1200px) {
+img{
+    width: 200px;
+}
+.producto img{
+    width: 500px;
+}
+.producto {
+    max-width: 1000px;
+    margin: 70px auto;
+    padding: 40px;
+    display: flex;
+    align-items: flex-start ;
+    gap: 60px;
+    background-color: #1f63be;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    flex-direction: row;
+}
+}
+
+/*para las pantallas más chicas que 1199px*/
+@media (max-width: 1199px) {
+img{
+    width: 100px;
+}
+.producto img{
+    width: 70%;
+    margin-left: 15%;
+}
+.producto {
+    max-width: 1000px;
+    margin: 70px auto;
+    padding: 40px;
+    gap: 60px;
+    background-color: #1f63be;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+}
 
 body {
     font-family: Monofonto, sans-serif;
@@ -133,21 +174,6 @@ table tr{
 
 }
 
-.producto {
-    
-    max-width: 1000px;
-    margin: 70px auto;
-    padding: 40px;
-    display: flex;
-    align-items: flex-start ;
-    gap: 60px;
-    background-color: #1f63be;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    flex-direction: row;
-
-}
-
 .producto h1 {
     font-size: 40px;
     border-bottom: 1px solid rgb(238, 235, 235);
@@ -225,6 +251,14 @@ table tr{
 }
 
 .compra button {
+    background-color: #F2E870;
+    color: #000101;
+    border: none;
+    padding: 12px 20px;
+    font-family: Monofonto, sans-serif;
+}
+
+button {
     background-color: #F2E870;
     color: #000101;
     border: none;
