@@ -58,7 +58,21 @@
                 <label><input type="checkbox" name="producto" value="bateria"> Cambio de batería - $30.000</label>
                 <label><input type="checkbox" name="producto" value="notebook"> Limpieza de notebook - $20.000</label>
                 <label><input type="checkbox" name="producto" value="pc"> Formateo de PC - $25.000</label>
+
+                <label for="cantidad_pantalla">Cantidad - Reparación de pantalla</label>
+                <input type="number" id="cantidad_pantalla" name="cantidad_pantalla" min="0" value="0">
+
+                <label for="cantidad_bateria">Cantidad - Cambio de batería</label>
+                <input type="number" id="cantidad_bateria" name="cantidad_bateria" min="0" value="0">
+
+                <label for="cantidad_notebook">Cantidad - Limpieza de notebook</label>
+                <input type="number" id="cantidad_notebook" name="cantidad_notebook" min="0" value="0">
+
+                <label for="cantidad_pc">Cantidad - Formateo de PC</label>
+                <input type="number" id="cantidad_pc" name="cantidad_pc" min="0" value="0">
             </fieldset>
+
+            <p>Total estimado: $<span id="resultado">0</span></p>
 
             <button type="submit">Confirmar compra</button>
         </form>
@@ -67,5 +81,40 @@
     <footer>
         <p>Venta de impresoras</p>
     </footer>
+
+    <script>
+        const precios = {
+            cantidad_pantalla: 45000,
+            cantidad_bateria: 30000,
+            cantidad_notebook: 20000,
+            cantidad_pc: 25000
+        };
+
+        const resultado = document.getElementById("resultado");
+        const inputsCantidad = Object.keys(precios).map(id => document.getElementById(id));
+
+        function calcularTotal() {
+            let total = 0;
+
+            inputsCantidad.forEach(input => {
+                const cantidad = parseInt(input.value, 10) || 0;
+                const precio = precios[input.id];
+                total += cantidad * precio;
+            });
+
+            resultado.textContent = total.toLocaleString("es-AR");
+        }
+
+        inputsCantidad.forEach(input => {
+            input.addEventListener("input", calcularTotal);
+        });
+
+        document.querySelector("form").addEventListener("submit", function (e) {
+            e.preventDefault();
+            calcularTotal();
+        });
+
+        calcularTotal();
+    </script>
 </body>
 </html>
