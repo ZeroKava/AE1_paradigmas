@@ -71,6 +71,16 @@
                 <label for="cantidad_pc">Cantidad - Formateo de PC</label>
                 <input type="number" id="cantidad_pc" name="cantidad_pc" min="0" value="0">
             </fieldset>
+            
+            <fieldset>
+                <legend>Cupón de descuento</legend>
+
+                <label for="cupon">Ingresá tu código de descuento</label>
+                <input type="text" id="cupon" name="cupon" placeholder="Ej: UCP10">
+                <button type="button" id="btnCupon">Validar cupón</button>
+
+                <p id="mensajeCupon"></p>
+            </fieldset>
 
             <p>Total estimado: $<span id="resultado">0</span></p>
 
@@ -115,6 +125,27 @@
         });
 
         calcularTotal();
+        function validarCupon() {
+            const inputCupon = document.getElementById("cupon");
+            const mensajeCupon = document.getElementById("mensajeCupon");
+
+            const codigo = inputCupon.value.trim().toUpperCase();
+
+            mensajeCupon.classList.remove("mensaje-error", "mensaje-exito");
+
+            if (codigo === "") {
+                mensajeCupon.textContent = "Por favor, ingrese un código";
+                mensajeCupon.classList.add("mensaje-error");
+            } else if (codigo === "UCP10") {
+                mensajeCupon.textContent = "Cupón aplicadote, tenés un 10% de descuento";
+                mensajeCupon.classList.add("mensaje-exito");
+            } else {
+                mensajeCupon.textContent = "Código inválido o vencido >:(";
+                mensajeCupon.classList.add("mensaje-error");
+            }
+        }
+
+        document.getElementById("btnCupon").addEventListener("click", validarCupon);
     </script>
 </body>
 </html>

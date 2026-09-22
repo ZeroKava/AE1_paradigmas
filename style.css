@@ -258,6 +258,26 @@ table tr{
     font-family: Monofonto, sans-serif;
 }
 
+.mensaje-error {
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+    color: #ff4d4d;
+    border: 1px solid #ff4d4d;
+    text-shadow: 0 0 6px #ff4d4d;
+    background-color: rgba(255, 77, 77, 0.1);
+}
+
+.mensaje-exito {
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+    color: #2bf979;
+    border: 1px solid #2bf979;
+    text-shadow: 0 0 6px #2bf979;
+    background-color: rgba(43, 249, 121, 0.1);
+}
+
 button {
     background-color: #F2E870;
     color: #000101;
