@@ -1,0 +1,26 @@
+[ 
+    {
+        "id": 1,
+        "nombre": "Impresora Gigante",
+        "categoria": "Impresora",
+        "descripcion": "Una impresora realmente grande",
+        "precio": 2000,
+        "imagen": "imagenes/impresora.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "Impresora Chiquitita",
+        "categoria": "Impresora",
+        "descripcion": "Una impresora muy chiquititita",
+        "precio": 1500,
+        "imagen": "imagenes/impresora_chiquitita.jpg"
+    },
+    {
+        "id": 3,
+        "nombre": "Impresora Gigante",
+        "categoria": "Impresora",
+        "descripcion": "Una impresora realmente grande",
+        "precio": 2000,
+        "imagen": "imagenes/impresora.jpg"
+    }
+]
