@@ -285,3 +285,55 @@ button {
     padding: 12px 20px;
     font-family: Monofonto, sans-serif;
 }
+
+/* ===== Módulo de contacto ===== */
+.contacto {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.contacto h2 {
+    color: #2bf979;
+    text-shadow: 0 0 6px #2bf979;
+}
+
+.contacto form {
+    max-width: 600px;
+    margin: 30px auto 0 auto;
+    text-align: left;
+}
+
+.contacto label {
+    display: block;
+    margin-top: 15px;
+}
+
+.contacto input,
+.contacto select,
+.contacto textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    background-color: #041207;
+    border: 1px solid #2bf979;
+    color: white;
+    font-family: Monofonto, sans-serif;
+}
+
+.contacto textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.contacto button {
+    margin-top: 20px;
+}
+
+.contacto button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+#mensajeContacto:empty {
+    display: none;
+}

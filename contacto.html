@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Emporio Brillante | Contacto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>El Emporio Brillante</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="listado_tabla.html">Catálogo</a>
+            <a href="producto.html">Producto</a>
+            <a href="comprar.html">Comprar</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <main class="contacto">
+        <h2>Contacto y consultas</h2>
+        <p>Contanos qué necesitás y te respondemos.</p>
+
+        <form id="formContacto" novalidate>
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com">
+
+            <label for="servicio">Servicio o producto de interés</label>
+            <select id="servicio" name="servicio">
+                <option value="">Seleccionar</option>
+                <option value="pantalla">Reparación de pantalla</option>
+                <option value="bateria">Cambio de batería</option>
+                <option value="notebook">Limpieza de notebook</option>
+                <option value="pc">Formateo de PC</option>
+                <option value="impresora">Compra de impresora</option>
+            </select>
+
+            <label for="consulta">Consulta</label>
+            <textarea id="consulta" name="consulta" placeholder="Escribí tu consulta acá"></textarea>
+
+            <button type="submit" id="btnEnviar">Enviar consulta</button>
+
+            <p id="mensajeContacto" role="status"></p>
+        </form>
+    </main>
+
+    <footer>
+        <p>Venta de impresoras Luciano&Matias.CO</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
