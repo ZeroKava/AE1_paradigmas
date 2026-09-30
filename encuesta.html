@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Emporio Brillante | Encuesta</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>El Emporio Brillante</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="listado_tabla.html">Catálogo</a>
+            <a href="producto.html">Producto</a>
+            <a href="comprar.html">Comprar</a>
+            <a href="encuesta.html">Encuesta</a>
+        </nav>
+    </header>
+
+    <main class="encuesta">
+
+        <h2>Encuesta de satisfacción</h2>
+        <p>Contanos cómo fue tu experiencia. Te lleva menos de un minuto.</p>
+
+        <form id="formEncuesta" novalidate>
+
+            <fieldset>
+                <legend>¿Qué tan satisfecho/a quedaste con el servicio?</legend>
+                <div class="opciones">
+                    <label><input type="radio" name="satisfaccion" value="1"> 1 - Muy insatisfecho</label>
+                    <label><input type="radio" name="satisfaccion" value="2"> 2 - Insatisfecho</label>
+                    <label><input type="radio" name="satisfaccion" value="3"> 3 - Neutral</label>
+                    <label><input type="radio" name="satisfaccion" value="4"> 4 - Satisfecho</label>
+                    <label><input type="radio" name="satisfaccion" value="5"> 5 - Muy satisfecho</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>¿Nos recomendarías a un amigo?</legend>
+                <div class="opciones">
+                    <label><input type="radio" name="recomienda" value="Sí"> Sí</label>
+                    <label><input type="radio" name="recomienda" value="Tal vez"> Tal vez</label>
+                    <label><input type="radio" name="recomienda" value="No"> No</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Comentarios (opcional)</legend>
+                <textarea id="comentario" maxlength="200" placeholder="Contanos qué te gustó y qué podemos mejorar"></textarea>
+                <p id="contador">200 caracteres restantes</p>
+            </fieldset>
+
+            <button type="submit" id="btnEnviar">Enviar encuesta</button>
+
+            <p id="mensajeEncuesta" aria-live="polite"></p>
+
+        </form>
+
+    </main>
+
+    <footer>
+        <p>Venta de impresoras</p>
+    </footer>
+
+    <script src="encuesta.js"></script>
+</body>
+
+</html>
