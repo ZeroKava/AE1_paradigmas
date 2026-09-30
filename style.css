@@ -337,3 +337,132 @@ button {
 #mensajeContacto:empty {
     display: none;
 }
+.encuesta {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.encuesta h2 {
+    color: #2bf979;
+    text-shadow: 0 0 6px #2bf979;
+    margin-bottom: 8px;
+}
+
+.encuesta form {
+    max-width: 600px;
+    margin: 30px auto 0 auto;
+    text-align: left;
+}
+
+.encuesta fieldset {
+    border: 2px solid #2bf979;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 25px;
+    background-color: rgba(43, 249, 121, 0.04);
+    box-shadow: 0 0 14px rgba(43, 249, 121, 0.15);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.encuesta legend {
+    padding: 0 10px;
+    font-size: 18px;
+    color: #2bf979;
+    text-shadow: 0 0 6px #2bf979;
+}
+
+/* Pregunta sin responder: se marca en rojo */
+.encuesta fieldset.sin-responder {
+    border-color: #ff4d4d;
+    box-shadow: 0 0 12px rgba(255, 77, 77, 0.4);
+}
+
+.encuesta fieldset.sin-responder legend {
+    color: #ff4d4d;
+    text-shadow: 0 0 6px #ff4d4d;
+}
+
+.encuesta .opciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.encuesta .opciones label {
+    flex: 1 1 150px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border: 1px solid rgba(43, 249, 121, 0.35);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.encuesta .opciones label:hover,
+.encuesta .opciones label:has(input:checked) {
+    background-color: rgba(43, 249, 121, 0.12);
+    border-color: #2bf979;
+}
+
+.encuesta input[type="radio"] {
+    accent-color: #2bf979;
+    width: 18px;
+    height: 18px;
+}
+
+.encuesta textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: 10px;
+    resize: vertical;
+    font-size: 16px;
+    font-family: Monofonto, sans-serif;
+    background-color: #041207;
+    border: 1px solid #2bf979;
+    color: white;
+}
+
+.encuesta textarea::placeholder {
+    color: rgba(43, 249, 121, 0.45);
+}
+
+.encuesta textarea:focus {
+    outline: none;
+    border-color: #ffffff;
+    box-shadow: 0 0 8px #2bf979;
+}
+
+#contador {
+    margin-top: 8px;
+    text-align: right;
+    font-size: 15px;
+    color: rgba(43, 249, 121, 0.8);
+}
+
+#contador.poco {
+    color: #F2E870;
+    text-shadow: 0 0 6px #F2E870;
+}
+
+.encuesta button[type="submit"] {
+    width: 100%;
+    padding: 16px;
+    font-size: 18px;
+}
+
+.encuesta button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+#mensajeEncuesta:empty {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .encuesta {
+        padding: 40px 5%;
+    }
+}
